@@ -73,8 +73,13 @@ evaluations with the provided models.
 
 ## Reference
 
-Our implementation is based on:
 ```
+@inproceedings{ding2021audio,
+  title={Audio lottery: Speech recognition made ultra-lightweight, noise-robust, and transferable},
+  author={Ding, Shaojin and Chen, Tianlong and Wang, Zhangyang},
+  booktitle={International Conference on Learning Representations},
+  year={2021}
+}
 @article{burchi2021efficient,
   title={Efficient conformer: Progressive downsampling and grouped attention for automatic speech recognition},
   author={Burchi, Maxime and Vielzeuf, Valentin},
