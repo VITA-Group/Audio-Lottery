@@ -1,0 +1,14 @@
+test_manifest: data/libri_test_other_manifest.csv
+verbose: False
+
+model:
+  model_path: /dir/of/the/LTH/experiment/folder # the folder that contains prune_*
+  use_half: False
+
+lm:
+  decoder_type: beam
+  beam_width: 1024
+  lm_path: lm/librispeech/3-gram.pruned.3e-7.arpa
+  alpha: 1.97
+  beta: 4.36
+

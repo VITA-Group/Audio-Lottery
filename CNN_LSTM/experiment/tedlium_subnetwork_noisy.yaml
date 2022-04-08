@@ -1,0 +1,27 @@
+data:
+  train_manifest: data/ted_train_manifest.csv
+  val_manifest: data/ted_test_manifest.csv
+  batch_size: 32
+  augmentation:
+    spec_augment: True
+    noise_dir: '/path/to/noise/dataset'
+    noise_prob: 1.0
+    noise_min: 0.0
+    noise_max: 0.5
+
+model:
+  rnn_type: lstm
+  hidden_size: 1024
+  hidden_layers: 5
+
+training:
+  epochs: 16
+
+checkpointing:
+  continue_from: /dir/of/the/LTH/experiment/folder # the folder that contains prune_*, trained on original LibriSpeech
+  best_iter: 8 # iteration of the best subnetwork
+  save_folder: librispeech_subnetwork_noisy
+  save_n_recent_models: 17
+
+apex:
+  opt_level: 'O0'

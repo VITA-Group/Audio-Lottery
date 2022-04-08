@@ -1,0 +1,26 @@
+data:
+  train_manifest: data/libri_train_manifest.csv
+  val_manifest: data/libri_test_clean_manifest.csv
+  batch_size: 32
+  augmentation:
+    spec_augment: True
+model:
+  rnn_type: lstm
+  hidden_size: 1024
+  hidden_layers: 5
+
+training:
+  epochs: 16
+  prune_percentage: 0.2
+  prune_times: 20
+
+optim:
+  learning_anneal: 1.01
+
+checkpointing:
+  save_folder: deepspeech.pytorch/librispeech_prune/
+  save_n_recent_models: 17
+  pretrained_model: /dir/of/the/LTH/experiment/folder # The folder that contains prune_*, trained on the source dataset
+
+apex:
+  opt_level: 'O0'

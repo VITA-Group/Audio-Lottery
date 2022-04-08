@@ -10,4 +10,21 @@ Shaojin Ding, Tianlong Chen, Zhangyang Wang
 Lightweight speech recognition models have seen explosive demands owing to a growing amount of speech-interactive features on mobile devices. Since designing such systems from scratch is non-trivial, practitioners typically choose to compress large (pre-trained) speech models. Recently, lottery ticket hypothesis reveals the existence of highly sparse subnetworks that can be trained in isolation without sacrificing the performance of the full models. In this paper, we investigate the tantalizing possibility of using lottery ticket hypothesis to discover lightweight speech recognition models, that are (1) robust to various noise existing in speech; (2) transferable to fit the open-world personalization; and 3) compatible with structured sparsity. We conducted extensive experiments on CTC, RNN-Transducer, and Transformer models, and verified the existence of highly sparse winning tickets that can match the full model performance across those backbones. We obtained winning tickets that have less than 20% of full model weights on all backbones, while the most lightweight one only keeps 4.4% weights. Those winning tickets generalize to structured sparsity with no performance loss, and transfer exceptionally from large source datasets to various target datasets. Perhaps most surprisingly, when the training utterances have high background noises, the winning tickets even substantially outperform the full models, showing the extra bonus of noise robustness by inducing sparsity.
 
 ## Code
-Code would be available soon.
+Implementations of LTH on CNN-LSTM and Conformer backbones are included in this repo: 
+* [CNN-LSTM](https://github.com/VITA-Group/Audio-Lottery/CNN_LSTM)
+* [Conformer](https://github.com/VITA-Group/Audio-Lottery/Conformer)
+
+The detailed instructions and pretrained models are in the corresponding folders.
+
+## Reference
+
+```
+@inproceedings{ding2021audio,
+  title={Audio lottery: Speech recognition made ultra-lightweight, noise-robust, and transferable},
+  author={Ding, Shaojin and Chen, Tianlong and Wang, Zhangyang},
+  booktitle={International Conference on Learning Representations},
+  year={2021}
+}
+``` 
+
+Contact: shjd@tamu.edu

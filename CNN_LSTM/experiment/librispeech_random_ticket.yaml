@@ -1,0 +1,24 @@
+data:
+  train_manifest: data/libri_train_manifest.csv
+  val_manifest: data/libri_test_clean_manifest.csv
+  batch_size: 32
+  augmentation:
+    spec_augment: True
+
+model:
+  rnn_type: lstm
+  hidden_size: 1024
+  hidden_layers: 5
+
+training:
+  epochs: 16
+  prune_percentage: 0.2
+  prune_times: 20
+
+checkpointing:
+  pretrained_model: /dir/to/a/previous/LTH/experiment # Use to extract the IMP mask. The folder that contains prune_*
+  save_folder: librispeech_random_ticket
+  save_n_recent_models: 17
+
+apex:
+  opt_level: 'O0'
