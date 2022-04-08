@@ -11,8 +11,8 @@ Lightweight speech recognition models have seen explosive demands owing to a gro
 
 ## Code
 Implementations of LTH on CNN-LSTM and Conformer backbones are included in this repo: 
-* [CNN-LSTM](https://github.com/VITA-Group/Audio-Lottery/CNN_LSTM)
-* [Conformer](https://github.com/VITA-Group/Audio-Lottery/Conformer)
+* [CNN-LSTM](CNN_LSTM)
+* [Conformer](CNN_LSTM)
 
 The detailed instructions and pretrained models are in the corresponding folders.
 
