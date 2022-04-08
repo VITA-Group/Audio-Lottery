@@ -84,6 +84,12 @@ python prune_test.py +experiment=librispeech_prune_eval_clean
 ## Reference
 
 ```
+@inproceedings{ding2021audio,
+  title={Audio lottery: Speech recognition made ultra-lightweight, noise-robust, and transferable},
+  author={Ding, Shaojin and Chen, Tianlong and Wang, Zhangyang},
+  booktitle={International Conference on Learning Representations},
+  year={2021}
+}
 @inproceedings{amodei2016deep,
   title={Deep speech 2: End-to-end speech recognition in english and mandarin},
   author={Amodei, Dario and Ananthanarayanan, Sundaram and Anubhai, Rishita and Bai, Jingliang and Battenberg, Eric and Case, Carl and Casper, Jared and Catanzaro, Bryan and Cheng, Qiang and Chen, Guoliang and others},
